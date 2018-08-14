@@ -11,8 +11,9 @@ hr {
 }
 
 #profile-photo {
-    max-width: 300px; 
-    height: auto
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
 
 #trivia-list {
