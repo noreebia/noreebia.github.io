@@ -6,16 +6,33 @@ hr {
     background-color: #333; /* Modern Browsers */
 }
 
-.trivia-list {
+#content {
+    text-align:center;
+}
+
+#profile-photo {
+    max-width: 300px; 
+    height: auto
+}
+
+#trivia-list {
      display: inline-block;
  }
 
- .trivia-list li {
+#trivia-list li {
     float: left;
     list-style-type: disc;
     width: 50%;
  }
 
-.description {
+.section {
+    text-align: left;
+ }
+
+.section-title {
+    margin-bottom: 15px;
+}
+
+.section-description {
     text-align: left;
 }
