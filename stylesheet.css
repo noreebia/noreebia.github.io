@@ -21,9 +21,9 @@ hr {
  }
 
 #trivia-list li {
-    float: left;
+    /* float: left; */
     list-style-type: disc;
-    width: 50%;
+    /* width: 50%; */
  }
 
 .section {
@@ -36,4 +36,12 @@ hr {
 
 .section-description {
     text-align: left;
+}
+
+@media only screen and (min-width: 1000px){
+    #trivia-list li {
+        float: left;
+        width: 50%;
+        list-style-type: disc;
+    }
 }
