@@ -31,7 +31,8 @@ hr {
  }
 
 .section {
-    text-align: left;
+    text-align: justify;
+    text-justify:auto;
  }
 
 .section-title {
@@ -42,7 +43,7 @@ hr {
     text-align: left;
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1100px){
     #trivia-list li {
         float: left;
         width: 50%;
