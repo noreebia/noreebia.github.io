@@ -1,1 +1,3 @@
-Source for my portfolio webstie
+Source files for my portfolio website
+
+Made using simple HTML and CSS
