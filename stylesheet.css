@@ -25,10 +25,14 @@ hr {
  }
 
 #trivia-list li {
-    /* float: left; */
     list-style-type: disc;
-    /* width: 50%; */
  }
+
+ #contact-table{
+     margin: 0 auto;
+     /* border: 1px solid; */
+     width: 100%;
+  }
 
 .section {
     text-align: justify;
