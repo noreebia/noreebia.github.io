@@ -16,20 +16,35 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+            </div>
             <div id="content" class="col-sm-6">
-                <div id="profile">
+                <div id="profile" >
                     <img id="profile-photo" , src="/images/profile-photo.jpg">
-                    <h2>Sooyoung Kim</h2>
-                    <div>I am a software developer from England with a passion for technology</div>
+                    <h2>Sooyoung "Sue" Kim</h2>
                 </div>
                 <hr>
-                <div id="contact-div">
+                <div>
+                    <h2 style="text-align:left">About</h2>
+                    <p class = "justified">
+                    Hi there!<br/>I'm a British software engineer currently living and working in South Korea.
+                    I am skilled in developing web applications.
+                    While I am most confident working as a back-end developer setting up servers and databases, I strive to familiarize myself with every aspect of web development - be it front-end, back-end, or devops.
+                    </p>
+
+                    <!-- <p class = "justified">British software engineer currently living and working in South Korea. British software engineer currently living and working in South Korea.British software engineer currently living and working in South Korea.British software engineer currently living and working in South Korea.British software engineer currently living and working in South Korea.British software engineer currently living and working in South Korea.</p> -->
+                </div>
+                <!-- <hr> -->
+                <!-- <div id="contact-div">
                     <table id="contact-table">
                         <td><a href="https://github.com/noreebia">Github</a></td>
                         <td><a href="https://www.linkedin.com/in/soo-young-kim/">LinkedIn</a></td>
                         <td><a href="mailto:swimming.dev@gmail.com">Email</a></td>
                     </table>
+                </div> -->
+                <hr>
+                <div class="section">
+                    <h2 class="section-title">Experience</h2>
                 </div>
                 <hr>
                 <div class="section" style="text-align:left">
@@ -43,86 +58,41 @@
                         <li>Diamond rank in Overwatch</li>
                         <li>hire me pls</li>
                     </ul>
-
                 </div>
                 <hr>
-                <div class="section">
-                    <h2 class="section-title">Skills</h2>
-                    <dl>
-                        <dt>Java</dt>
-                        <dd>Java is my go-to language. Whether it's writing a linked-list from scratch or creating
-                            industrial-strength
-                            web servers with Spring Boot, I've done it all with Java. While I do not know the complete
-                            ins
-                            and outs of the low-level implementation of the JVM and the garbage collector, I am
-                            familiar
-                            with almost all the data structures as well as general programming knowledge (threads,
-                            exception
-                            handling, networks, etc.). Not only am I well-acquainted with the inherent object-oriented
-                            nature
-                            of the traditional Java coding style, I am also familiar with the functional programming
-                            paradigm
-                            that comes with Java 8 such as anonymous lambda functions, functional interfaces, and
-                            stream
-                            operations
-                        </dd>
-                        <dt>Object-Oriented-Programming</dt>
-                        <dd>I strive to write clean, reusable code and have familiarized myself with high-level
-                            object-oriented
-                            concepts such as dependency injection, liskov substitution principle, and various design
-                            patterns.</dd>
-                        <dt>JavaScript, HTML, and CSS</dt>
-                        <dd>I possess a good grasp of HTML and CSS. I have a good understanding of how the DOM works
-                            under the
-                            hood, and how to manipulate it accordingly to my needs. Not only do I know how to make
-                            clean
-                            web pages for desktops, but I also know how use media queries and libraries such as
-                            Bootstrap
-                            to create responsive websites that adjusts to the user's screen. As for Javascript, I am
-                            comfortable
-                            using up-to-date ES6 syntax, and familiar with the language-specific intricacies such as
-                            variable
-                            hoisting, closures, and prototypes. While I do not have any actual front-end work
-                            experience,
-                            I have studied on my own time to become well-acquainted with front-end libraries such as
-                            React.js
-                            and Vue.js.</dd>
-                        <dt>Web Development</dt>
-                        <dd> Has a very good understanding of typical web-related architecture such as client-server
-                            systems,
-                            monolith architecture, microservice architecture, as well as the decentralized peer-to-peer
-                            model.
-                            Knows how an HTTP request/response is composed and has experience creating and maintaining
-                            production-grade
-                            RESTful systems using the Spring Boot framework.</dd>
-                        <dt>Blockchain</dt>
-                        <dd>I was part of the cryptocurrency team in a blockchain startup company, and spent my time
-                            there tinkering
-                            with all the major existing cryptocurrencies (Bitcoin, Ethereum, Cardano, etc.), as well as
-                            learning
-                            how to make new ones. I have a solid understanding of the essential concepts of a
-                            decentralized
-                            ledger system, as well as how to set up various existing cryptocurrency nodes in a cloud
-                            service
-                            and interact with them remotely through HTTP requests.</dd>
-                    </dl>
-                </div>
-                <hr>
-                <!-- <div class="section">
-                    <h2 class="section-title">Education</h2>
-                </div>
-                <hr>
-                <div class="section">
-                    <h2 class="section-title">Experience</h2>
-                </div>
-                <hr>
-                <div class="section">
-                    <h2 class="section-title">Hobbies</h2>
-                </div> -->
             </div>
-            <div class="col-sm-3"></div>
+            <div class="col-sm-3" style="display:flex; justify-content: center;">
+                <div id="contact-me">p</div>
+            </div>
+<!-- 
+            <div class="col-sm-3" style="display:flex; justify-content: center;">
+                <div id="contact-me" data-spy="affix" data-offset-top="150">p</div>
+            </div> -->
         </div>
     </div>
 </body>
+
+<script>
+    $(document ).ready(function() {
+        // $("#contact-me").css({ top: '100px' });
+        // $("#contact-me").css('top', '1000px' );
+        var width = $(".col-sm-3").innerWidth();
+        $("#contact-me").css({ 'margin-left':'0px', 'margin-right':'0px','position': 'fixed', 'top': '10px', 'width': width*7/10 });
+
+        console.log( "ready!" );
+    });
+
+    $(document).scroll(function(){
+        console.log( "ready!" );
+        var width = $(".col-sm-3").innerWidth();
+
+        var width = $(window).width()/4;
+
+        // $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','position': 'fixed', 'top': '10px', 'width': width*7/10 });
+
+        $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width*7/10 });
+
+    });
+</script>
 
 </html>
