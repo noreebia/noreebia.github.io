@@ -31,20 +31,49 @@
                     I am skilled in developing web applications.
                     While I am most confident working as a back-end developer setting up servers and databases, I strive to familiarize myself with every aspect of web development - be it front-end, back-end, or devops.
                     </p>
-
-                    <!-- <p class = "justified">British software engineer currently living and working in South Korea. British software engineer currently living and working in South Korea.British software engineer currently living and working in South Korea.British software engineer currently living and working in South Korea.British software engineer currently living and working in South Korea.British software engineer currently living and working in South Korea.</p> -->
                 </div>
-                <!-- <hr> -->
-                <!-- <div id="contact-div">
-                    <table id="contact-table">
-                        <td><a href="https://github.com/noreebia">Github</a></td>
-                        <td><a href="https://www.linkedin.com/in/soo-young-kim/">LinkedIn</a></td>
-                        <td><a href="mailto:swimming.dev@gmail.com">Email</a></td>
-                    </table>
-                </div> -->
                 <hr>
                 <div class="section">
                     <h2 class="section-title">Experience</h2>
+                    <!-- <div style="display:flex; justify-content: space-between;">
+                        <p style="margin-bottom: 0px;">ICONLOOP</p>
+                        <p>Seoul, Republic of Korea</p>
+                    </div>
+                    <div style="display:flex; justify-content: space-between;">
+                        <p>Software Engineer</p>
+                        <p>01/2019 - Present</p>
+                    </div> -->
+
+                        <div style="display:flex; justify-content: space-between;">
+                            <div>
+                                <p style="margin-bottom:0px;">ICONLOOP, Software Engineer</p s>
+                                <!-- <p>Software Engineer</p>     -->
+                                <p>Jan 2019 - Present</p>    
+                            </div>
+    
+                            <div style="display:flex; flex-direction:column; align-items: flex-end;">
+                                <p style="margin-bottom:0px;">Seoul, Republic of Korea</p s>
+                                <!-- <p>01/2019 - Present</p>     -->
+                            </div>
+                        </div>
+                        <p>
+                            &emsp;•&emsp;Developed server-side REST APIs for several blockchain applications with Spring Boot (mostly) and Node.js (partly)<br>
+                            &emsp;•&emsp;Set up production-grade web service deployment environments using Docker, Nginx, and AWS<br>
+                            &emsp;•&emsp;Automated the deployment process of my team by setting up a CI/CD pipeline using GitLab CI/CD, exponentially speeding up the company development process<br>
+                            &emsp;•&emsp;Implemented a feature to send web push notification to users using JavaScript service workers and server-side Node.js library<br><br>
+    
+    Techonologies used: Java, Spring, JPA, MyBatis, MySQL, JavaScript, React.js, Node.js, Docker, Nginx, AWS(EC2, S3), GitLab CI/CD<br><br>
+    
+    As the sole server-side developer of https://broof.io, I developed everything from the ground up including designing the database tables, fine-tuning them for performance, implementing user authentication and authorization mechanisms using JWTs, developing CRUD APIs, and finally, deploying them to production on AWS.
+    
+    I also automated the deployment process of my team using CI/CD technology provided by GitLab. As the whole code of our company was hosted in a private GitLab repository, I set up a CI/CD pipeline to automatically build, test, and optionally deploy a service whenever one of the developers pushed their code to the repository. This enabled developers that lacked knowledge of the infrastructure to deploy their code conveniently, exponentially speeding up the development process of the whole company.
+                        </p>
+    
+                    <!-- <div style="display:flex; justify-content: space-between;">
+                        <p>Software Engineer</p>
+                        <p>01/2019 - Present</p>
+                    </div> -->
+
                 </div>
                 <hr>
                 <div class="section" style="text-align:left">
@@ -64,32 +93,21 @@
             <div class="col-sm-3" style="display:flex; justify-content: center;">
                 <div id="contact-me">p</div>
             </div>
-<!-- 
-            <div class="col-sm-3" style="display:flex; justify-content: center;">
-                <div id="contact-me" data-spy="affix" data-offset-top="150">p</div>
-            </div> -->
         </div>
     </div>
 </body>
 
 <script>
     $(document ).ready(function() {
-        // $("#contact-me").css({ top: '100px' });
-        // $("#contact-me").css('top', '1000px' );
         var width = $(".col-sm-3").innerWidth();
-        $("#contact-me").css({ 'margin-left':'0px', 'margin-right':'0px','position': 'fixed', 'top': '10px', 'width': width*7/10 });
-
+        // $("#contact-me").css({ 'margin-left':'0px', 'margin-right':'0px','position': 'fixed', 'top': '10px', 'width': width*7/10 });
+        $("#contact-me").css({ 'margin-left':'0px', 'margin-right':'0px','position': 'fixed', 'top': '10px', 'max-width': '150px', 'min-width': '100px' });
         console.log( "ready!" );
     });
 
     $(document).scroll(function(){
         console.log( "ready!" );
         var width = $(".col-sm-3").innerWidth();
-
-        // var width = $(window).width()/4;
-
-        // $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','position': 'fixed', 'top': '10px', 'width': width*7/10 });
-
         $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width*7/10 });
 
     });
@@ -97,11 +115,6 @@
     $( window ).resize(function() {
         console.log( "ready!" );
         var width = $(".col-sm-3").innerWidth();
-
-        // var width = $(window).width()/4;
-
-        // $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','position': 'fixed', 'top': '10px', 'width': width*7/10 });
-
         $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width*7/10 });
     });
 </script>
