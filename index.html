@@ -91,32 +91,52 @@
                 <hr>
             </div>
             <div class="col-sm-3" style="display:flex; justify-content: center;">
-                <div id="contact-me">p</div>
+                <p>Other links</p>
+                <div id="contact-me" style="display:flex; flex-direction: column; justify-content: space-around; align-items: center;">
+                    <a href="https://github.com/noreebia" target="_blank">
+                        <img class="contact-photo", src="/images/github-logo-2.png">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/suekimdev/" target="_blank">
+                        <img class="contact-photo" , src="/images/linkedin-logo.png">
+                    </a>
+
+                    <a href="mailto:suekimdev@gmail.com" target="_blank">
+                        <img class="contact-photo" , src="/images/gmail-logo.png">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </body>
 
 <script>
-    $(document ).ready(function() {
+    function adjustContactSection() {
         var width = $(".col-sm-3").innerWidth();
-        // $("#contact-me").css({ 'margin-left':'0px', 'margin-right':'0px','position': 'fixed', 'top': '10px', 'width': width*7/10 });
+        $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width*7/10 });
+    }
+
+    // $(document ).ready(adjustContactSection);
+
+    $(document).scroll(adjustContactSection);
+
+    $( window ).resize(adjustContactSection);
+
+    $(document).ready(function(){
+        var width = $(".col-sm-3").innerWidth();
         $("#contact-me").css({ 'margin-left':'0px', 'margin-right':'0px','position': 'fixed', 'top': '10px', 'max-width': '150px', 'min-width': '100px' });
-        console.log( "ready!" );
     });
 
-    $(document).scroll(function(){
-        console.log( "ready!" );
-        var width = $(".col-sm-3").innerWidth();
-        $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width*7/10 });
+    // $(document).scroll(function(){
+    //     var width = $(".col-sm-3").innerWidth();
+    //     $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width * 7/10 });
+    // });
 
-    });
+    // $( window ).resize(function(){
+    //     var width = $(".col-sm-3").innerWidth();
+    //     $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width * 7/10 });
+    // });
 
-    $( window ).resize(function() {
-        console.log( "ready!" );
-        var width = $(".col-sm-3").innerWidth();
-        $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width*7/10 });
-    });
 </script>
 
 </html>
