@@ -20,41 +20,44 @@ p {
     font-family: "Courier New";
   } */
 
-  * {
+* {
     font-family: "Tahoma";
-  }
+}
 
 
 hr {
     border: none;
     height: 2px;
     /* Set the hr color */
-    color: #333; /* old IE */
-    background-color: #333; /* Modern Browsers */
+    color: #333;
+    /* old IE */
+    background-color: #333;
+    /* Modern Browsers */
 }
+
 /* .affix {
     top: 20px;
     z-index: 9999 !important;
   } */
 #content {
-    text-align:center;
+    text-align: center;
 }
 
-.justified{
+.justified {
     text-align: justify;
 }
 
-.contact-photo{
+.contact-photo {
     width: 75px;
     height: auto;
     /* border-radius: 50%; */
 }
 
-#language-selector{
-    float:right;
+#language-selector {
+    float: right;
 }
 
-#contact-me{
+#contact-me {
     /* position:fixed; */
     border-radius: 40px;
     margin-left: auto;
@@ -67,37 +70,35 @@ hr {
     /* position: fixed; */
 }
 
-#profile{
+#profile {
     margin-top: 2%;
 }
 
 #profile-photo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    object-fit: cover;
     border-radius: 50%;
-    border-color: grey;
-    border-style: solid;
+    height: 300px;
+    width: 300px;
 }
 
 #trivia-list {
-     display: inline-block;
- }
+    display: inline-block;
+}
 
 /* #trivia-list li {
     list-style-type: disc;
  }  */
 
- #contact-table{
-     margin: 0 auto;
-     /* border: 1px solid; */
-     width: 100%;
-  }
+#contact-table {
+    margin: 0 auto;
+    /* border: 1px solid; */
+    width: 100%;
+}
 
 .section {
     text-align: justify;
-    text-justify:auto;
- }
+    text-justify: auto;
+}
 
 .section-title {
     margin-bottom: 15px;

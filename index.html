@@ -20,14 +20,16 @@
             </div>
             <div id="content" class="col-sm-6">
                 <div id="profile">
-                    <img id="profile-photo" , src="/images/profile-photo.jpg">
+                    <div id="profile-photo-wrapper">
+                        <img id="profile-photo" , src="/images/profile-photo-4.jpg">
+                    </div>
                     <h2>Sooyoung "Sue" Kim</h2>
                 </div>
                 <hr>
                 <div>
                     <h2 style="text-align:left">About</h2>
                     <p class="justified">
-                        Hi there!<br />I'm a British software engineer currently living and working in South Korea.
+                        Hi there!<br />I'm a British software engineer with 5 years of experience currently working in South Korea.
                         I am skilled in developing web applications.
                         While I am most confident working as a back-end developer setting up servers and databases, I
                         strive to familiarize myself with every aspect of web development - be it front-end, back-end,
@@ -37,25 +39,45 @@
                 <hr>
                 <div class="section">
                     <h2 class="section-title">Experience</h2>
-                    <!-- <div style="display:flex; justify-content: space-between;">
-                        <p style="margin-bottom: 0px;">ICONLOOP</p>
-                        <p>Seoul, Republic of Korea</p>
-                    </div>
-                    <div style="display:flex; justify-content: space-between;">
-                        <p>Software Engineer</p>
-                        <p>01/2019 - Present</p>
-                    </div> -->
 
                     <div style="display:flex; justify-content: space-between;">
                         <div>
-                            <p style="margin-bottom:0px;">ICONLOOP, Software Engineer</p s>
-                            <!-- <p>Software Engineer</p>     -->
-                            <p>Jan 2019 - Present</p>
+                            <p style="margin-bottom:0px;"><b>FLASK, Software Engineer</b></p>
+                            <p>Nov 2022 - Present</p>
+                        </div>
+
+                        <div style="display:flex; flex-direction:column; align-items: flex-end;">
+                            <p style="margin-bottom:0px;">Seoul, Republic of Korea</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; justify-content: space-between;">
+                        <div>
+                            <p style="margin-bottom:0px;"><b>Metabora, Software Engineer</b></p>
+                            <p>Jun 2020 - Oct 2022</p>
+                        </div>
+
+                        <div style="display:flex; flex-direction:column; align-items: flex-end;">
+                            <p style="margin-bottom:0px;">Seoul, Republic of Korea</p>
+                        </div>
+                    </div>
+                    <p>
+                        &emsp;•&emsp;Built and maintained REST API servers and batch processing servers<br>
+                        &emsp;•&emsp;Implemented search functionality for a video game platform using MySQL full-text
+                        indexes<br>
+                        &emsp;•&emsp;Developed admin tools and dashboards<br>
+                        &emsp;•&emsp;Designed and fine-tuned relational database schemas<br>
+                        &emsp;•&emsp;Designed, built, and improved a data visualization system for the company's
+                        blockchain network
+                    </p>
+
+                    <div style="display:flex; justify-content: space-between;">
+                        <div>
+                            <p style="margin-bottom:0px;"><b>ICONLOOP, Software Engineer</b></p>
+                            <p>Jan 2019 - Jun 2020</p>
                         </div>
 
                         <div style="display:flex; flex-direction:column; align-items: flex-end;">
                             <p style="margin-bottom:0px;">Seoul, Republic of Korea</p s>
-                            <!-- <p>01/2019 - Present</p>     -->
                         </div>
                     </div>
                     <p>
@@ -81,11 +103,6 @@
                         process of the whole company.
                     </p>
 
-                    <!-- <div style="display:flex; justify-content: space-between;">
-                        <p>Software Engineer</p>
-                        <p>01/2019 - Present</p>
-                    </div> -->
-
                 </div>
                 <hr>
                 <div class="section">
@@ -105,14 +122,15 @@
                 </div>
                 <hr>
                 <div class="section" style="text-align:left">
-                    <h2 class="section-title">Trivia</h2>
+                    <h2 class="section-title">Fun Facts</h2>
                     <ul id="trivia-list">
                         <li>
-                            Hobbies include playing the piano, watching Netflix, going to the gym, and playing video
+                            Hobbies include hiking, cycling, walking, lifting weights, and playing video
                             games
                         </li>
-                        <li>Diamond rank in Overwatch</li>
-                        <li>hire me pls</li>
+                        <li>Can type really fast (120 WPM)</li>
+                        <li>Diamond rank in Overwatch (Or at least, used to be. It's been many years since I've written
+                            this particular bullet point!)</li>
                     </ul>
                 </div>
                 <hr>
@@ -147,8 +165,6 @@
         $("#contact-me").css({ 'margin-left': 'auto', 'margin-right': 'auto', 'top': '20px', 'width': width * 7 / 10 });
     }
 
-    // $(document ).ready(adjustContactSection);
-
     $(document).scroll(adjustContactSection);
 
     $(window).resize(adjustContactSection);
@@ -157,16 +173,6 @@
         var width = $(".col-sm-3").innerWidth();
         $("#contact-me").css({ 'margin-left': '0px', 'margin-right': '0px', 'position': 'fixed', 'top': '20px', 'max-width': '150px', 'min-width': '100px' });
     });
-
-    // $(document).scroll(function(){
-    //     var width = $(".col-sm-3").innerWidth();
-    //     $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width * 7/10 });
-    // });
-
-    // $( window ).resize(function(){
-    //     var width = $(".col-sm-3").innerWidth();
-    //     $("#contact-me").css({ 'margin-left':'auto', 'margin-right':'auto','top': '10px', 'width': width * 7/10 });
-    // });
 
 </script>
 
