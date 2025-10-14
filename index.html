@@ -174,38 +174,38 @@
     document.addEventListener('scroll', adjustContactSection, {passive: true});
     window.addEventListener('resize', adjustContactSection);
 
-    function hideWithFade(el) {
-      const style = getComputedStyle(el);
+    function hideWithFade(element) {
+      const style = getComputedStyle(element);
       if (style.display === 'none' || style.opacity === '0') return;
       // ensure starting from visible state
-      el.style.opacity = '1';
+      element.style.opacity = '1';
       // trigger fade-out
       requestAnimationFrame(() => {
-        el.style.opacity = '0';
+        element.style.opacity = '0';
       });
       const onEnd = (e) => {
         if (e.propertyName === 'opacity') {
-          el.style.display = 'none';
+          element.style.display = 'none';
           // reset opacity for next show
-          el.style.opacity = '1';
-          el.removeEventListener('transitionend', onEnd);
+          element.style.opacity = '1';
+          element.removeEventListener('transitionend', onEnd);
         }
       };
-      el.addEventListener('transitionend', onEnd);
+      element.addEventListener('transitionend', onEnd);
     }
 
-    function showWithFade(el) {
-      const style = getComputedStyle(el);
+    function showWithFade(element) {
+      const style = getComputedStyle(element);
       if (style.display !== 'none') return;
       // Start hidden
-      el.style.opacity = '0';
+      element.style.opacity = '0';
       // restore layout display (class .contact-sidebar sets display:flex)
-      el.style.display = '';
+      element.style.display = '';
       // force reflow, then fade in
       // eslint-disable-next-line no-unused-expressions
-      el.offsetHeight;
+      element.offsetHeight;
       requestAnimationFrame(() => {
-        el.style.opacity = '1';
+        element.style.opacity = '1';
       });
     }
 
