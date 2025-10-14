@@ -1,24 +1,3 @@
-/* * {
-    font: 'Courier New' !important;/* <-- fonts
-} */
-/* body
-{
-    font-family: "Courier New";
-} */
-
-/* * { font-family: courier !important }
-
-body {
-    font-family: "courier";
-}
-
-body {
-    font-family: "Courier New", "Courier", monospace;
-}
-
-p {
-    font-family: "Courier New";
-  } */
 
 * {
     font-family: "Tahoma";
@@ -35,10 +14,6 @@ hr {
     /* Modern Browsers */
 }
 
-/* .affix {
-    top: 20px;
-    z-index: 9999 !important;
-  } */
 #content {
     text-align: center;
 }
@@ -85,9 +60,6 @@ hr {
     display: inline-block;
 }
 
-/* #trivia-list li {
-    list-style-type: disc;
- }  */
 
 #contact-table {
     margin: 0 auto;
@@ -108,10 +80,14 @@ hr {
     text-align: left;
 }
 
-/* @media only screen and (min-width: 1100px){
-    #trivia-list li {
-        float: left;
-        width: 50%;
-        list-style-type: disc;
-    }
-} */
+.links-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.contact-sidebar {
+    display: flex;
+    justify-content: center;
+}
