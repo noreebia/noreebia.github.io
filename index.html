@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="stylesheet.css">
     <title>Sooyoung Kim</title>
     <link rel="icon" type="image/x-icon" href="/images/profile-photo-4-cropped.jpg">
@@ -181,29 +178,89 @@
 </body>
 
 <script>
-    $(document).ready(function () {
-        $("#contact-me").css({ 'margin-left': '0px', 'margin-right': '0px', 'position': 'fixed', 'top': '20px', 'max-width': '150px', 'min-width': '100px' });
-        adjustContactSection()
+    document.addEventListener('DOMContentLoaded', function () {
+        const contactMe = document.getElementById('contact-me');
+        if (contactMe) {
+            Object.assign(contactMe.style, {
+                marginLeft: '0px',
+                marginRight: '0px',
+                position: 'fixed',
+                top: '20px',
+                maxWidth: '150px',
+                minWidth: '100px'
+            });
+        }
+        adjustContactSection();
     });
 
-    $(document).scroll(adjustContactSection);
+    document.addEventListener('scroll', adjustContactSection, { passive: true });
+    window.addEventListener('resize', adjustContactSection);
 
-    $(window).resize(adjustContactSection);
-
-    function adjustContactSection() {
-        if(($(window).scrollTop() + $(window).height() > $(document).height() - 100 || window.matchMedia('(max-width: 700px)').matches) && $("#contact-me").css("display") != "none") {
-            $("#contact-me-wrapper").hide("slow");
-            return
-        }
-
-        if($("#contact-me-wrapper").css("display") == "none") {
-            $("#contact-me-wrapper").show("slow")
-        }
-
-        var width = $(".col-sm-3").innerWidth();
-        $("#contact-me").css({ 'margin-left': 'auto', 'margin-right': 'auto', 'top': '20px', 'width': width * 7 / 10 });
+    function hideWithFade(el) {
+        const style = getComputedStyle(el);
+        if (style.display === 'none' || style.opacity === '0') return;
+        // ensure starting from visible state
+        el.style.opacity = '1';
+        // trigger fade-out
+        requestAnimationFrame(() => {
+            el.style.opacity = '0';
+        });
+        const onEnd = (e) => {
+            if (e.propertyName === 'opacity') {
+                el.style.display = 'none';
+                // reset opacity for next show
+                el.style.opacity = '1';
+                el.removeEventListener('transitionend', onEnd);
+            }
+        };
+        el.addEventListener('transitionend', onEnd);
     }
 
+    function showWithFade(el) {
+        const style = getComputedStyle(el);
+        if (style.display !== 'none') return;
+        // Start hidden
+        el.style.opacity = '0';
+        // restore layout display (class .contact-sidebar sets display:flex)
+        el.style.display = '';
+        // force reflow, then fade in
+        // eslint-disable-next-line no-unused-expressions
+        el.offsetHeight;
+        requestAnimationFrame(() => {
+            el.style.opacity = '1';
+        });
+    }
+
+    function adjustContactSection() {
+        const contactWrapper = document.getElementById('contact-me-wrapper');
+        const contactMe = document.getElementById('contact-me');
+        if (!contactWrapper || !contactMe) return;
+
+        const nearBottomOrSmall = (window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 100) ||
+            window.matchMedia('(max-width: 700px)').matches;
+
+        const isHidden = getComputedStyle(contactWrapper).display === 'none';
+
+        if (nearBottomOrSmall && !isHidden) {
+            hideWithFade(contactWrapper);
+            return;
+        }
+
+        if (!nearBottomOrSmall && isHidden) {
+            showWithFade(contactWrapper);
+        }
+
+        const col = document.querySelector('.col-sm-3');
+        if (col) {
+            const width = col.clientWidth; // includes padding, similar to jQuery innerWidth
+            Object.assign(contactMe.style, {
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                top: '20px',
+                width: (width * 7 / 10) + 'px'
+            });
+        }
+    }
 </script>
 
 </html>

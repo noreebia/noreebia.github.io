@@ -67,6 +67,12 @@ hr {
     width: 100%;
 }
 
+/* Smooth fade for the contact sidebar wrapper */
+#contact-me-wrapper {
+    opacity: 1;
+    transition: opacity 300ms ease;
+}
+
 .section {
     text-align: justify;
     text-justify: auto;
