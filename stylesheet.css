@@ -89,8 +89,8 @@ a:focus {
 }
 
 /* Keep the profile area visually centered */
-#profile {
-  margin-top: 2%;
+#profile-container {
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -115,12 +115,6 @@ a:focus {
 #contact-me-wrapper {
   opacity: 1;
   transition: opacity 300ms ease;
-}
-
-#contact-table {
-  margin: 0 auto;
-  /* border: 1px solid; */
-  width: 100%;
 }
 
 #trivia-list {
