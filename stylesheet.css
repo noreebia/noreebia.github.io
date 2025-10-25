@@ -99,6 +99,10 @@ a:focus {
     height: 300px;
     width: 300px;
   }
+
+  .profile-name {
+    margin: 1.5rem 0;
+  }
 }
 
 /* Smooth fade for the contact sidebar wrapper */
