@@ -1,4 +1,4 @@
-
+/* Base elements */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 16px;
@@ -9,7 +9,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-
 hr {
   border: none;
   height: 1px;
@@ -18,24 +17,60 @@ hr {
   background-color: #e5e7eb; /* modern browsers */
 }
 
-#content {
-  text-align: left;
+/* Typography improvements */
+
+/* Headings scale */
+h1,
+h2,
+h3,
+h4 {
+  color: #111;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
-.justified {
-  text-align: left;
-  hyphens: auto;
+h1 { font-size: clamp(1.75rem, 1.2rem + 2vw, 2.25rem); }
+h2 { font-size: clamp(1.5rem, 1.1rem + 1.5vw, 1.875rem); }
+h3 { font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem); }
+
+/* Paragraphs and lists */
+p { margin: 0 0 1rem; }
+ul,
+ol {
+  padding-left: 1.2rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+li { margin-bottom: 0.4rem; }
+
+/* Link styling */
+a {
+  color: #0a58ca;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+}
+a:hover,
+a:focus {
+  color: #084298;
+  text-decoration-thickness: 0.12em;
 }
 
-.contact-photo {
-  width: 75px;
-  height: auto;
-  /* border-radius: 50%; */
+/* Limit measure for comfortable reading */
+.section,
+#content p,
+#content ul,
+#content ol { max-width: 70ch; }
+
+/* Layout and structure */
+#content { text-align: left; }
+
+/* Keep the profile area visually centered */
+#profile {
+  margin-top: 2%;
+  text-align: center;
 }
 
-#language-selector {
-  float: right;
-}
+#language-selector { float: right; }
 
 #contact-me {
   /* position:fixed; */
@@ -50,21 +85,11 @@ hr {
   /* position: fixed; */
 }
 
-#profile {
-  margin-top: 2%;
+/* Smooth fade for the contact sidebar wrapper */
+#contact-me-wrapper {
+  opacity: 1;
+  transition: opacity 300ms ease;
 }
-
-#profile-photo {
-  object-fit: cover;
-  border-radius: 50%;
-  height: 300px;
-  width: 300px;
-}
-
-#trivia-list {
-  display: inline-block;
-}
-
 
 #contact-table {
   margin: 0 auto;
@@ -72,24 +97,36 @@ hr {
   width: 100%;
 }
 
-/* Smooth fade for the contact sidebar wrapper */
-#contact-me-wrapper {
-  opacity: 1;
-  transition: opacity 300ms ease;
+#trivia-list { display: inline-block; }
+
+/* Media & images */
+#profile-photo {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
 }
 
+.contact-photo {
+  width: 75px;
+  height: auto;
+  /* border-radius: 50%; */
+}
+
+/* Sections and utilities */
 .section {
-  text-align: justify;
+  text-align: left;
   text-justify: auto;
+  hyphens: auto;
 }
 
 .section-title {
-  margin-bottom: 15px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
 }
 
-.section-description {
-  text-align: left;
-}
+.section-description { text-align: left; }
 
 .links-row {
   display: flex;
@@ -103,32 +140,10 @@ hr {
   justify-content: center;
 }
 
-/* Typography improvements */
-
-/* Headings scale */
-h1, h2, h3, h4 { color: #111; line-height: 1.2; font-weight: 700; }
-h1 { font-size: clamp(1.75rem, 1.2rem + 2vw, 2.25rem); }
-h2 { font-size: clamp(1.5rem, 1.1rem + 1.5vw, 1.875rem); }
-h3 { font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem); }
-
-/* Paragraphs and lists */
-p { margin: 0 0 1rem; }
-ul, ol { padding-left: 1.2rem; margin-top: 0.25rem; margin-bottom: 1rem; }
-li { margin-bottom: 0.4rem; }
-
-/* Limit measure for comfortable reading */
-.section, #content p, #content ul, #content ol { max-width: 70ch; }
-.section { text-align: left; text-justify: auto; hyphens: auto; }
-
-/* Keep the profile area visually centered */
-#profile { text-align: center; }
-
-/* Link styling */
-a { color: #0a58ca; text-decoration-thickness: 0.08em; text-underline-offset: 0.15em; }
-a:hover, a:focus { color: #084298; text-decoration-thickness: 0.12em; }
-
-/* Section title spacing */
-.section-title { margin-top: 0.5rem; margin-bottom: 0.75rem; font-weight: 700; }
+.justified {
+  text-align: left;
+  hyphens: auto;
+}
 
 /* Slightly larger type on very wide screens */
 @media (min-width: 1200px) {
