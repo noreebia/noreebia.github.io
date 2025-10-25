@@ -7,6 +7,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  /* Slightly larger type on very wide screens */
+  @media (min-width: 1200px) {
+    font-size: 17px;
+  }
 }
 
 hr {
@@ -165,14 +170,10 @@ a:focus {
   justify-content: center;
 }
 
-.justified {
-  text-align: left;
-  hyphens: auto;
+.about-content {
+  text-align: justify;
 }
 
-/* Slightly larger type on very wide screens */
-@media (min-width: 1200px) {
-  body {
-    font-size: 17px;
-  }
+.experience-bullet-points, .experience-description, .experience-technologies {
+  text-align: justify;
 }
