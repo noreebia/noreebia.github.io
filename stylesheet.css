@@ -76,7 +76,7 @@ a:focus {
 }
 
 /* Limit measure for comfortable reading */
-.section,
+.experience-section,
 #content p,
 #content ul,
 #content ol {
@@ -98,7 +98,7 @@ a:focus {
   float: right;
 }
 
-#contact-me {
+#floating-contact-section-container {
   /* position:fixed; */
   border-radius: 40px;
   margin-left: auto;
@@ -112,7 +112,7 @@ a:focus {
 }
 
 /* Smooth fade for the contact sidebar wrapper */
-#contact-me-wrapper {
+#floating-contact-section-inner-container {
   opacity: 1;
   transition: opacity 300ms ease;
 }
@@ -129,20 +129,20 @@ a:focus {
   width: 300px;
 }
 
-.contact-photo {
-  width: 75px;
+.contact-link-image {
+  width: 4.5rem;
   height: auto;
   /* border-radius: 50%; */
 }
 
 /* Sections and utilities */
-.section {
+.experience-section {
   text-align: justify;
   /*text-justify: auto;*/
   /*hyphens: auto;*/
 }
 
-.section-title {
+.experience-section-title {
   margin-top: 0.5rem;
   margin-bottom: 0.75rem;
   font-weight: 700;

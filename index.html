@@ -73,8 +73,8 @@
             </p>
           </div>
           <hr>
-          <div class="section">
-            <h2 class="section-title">Experience</h2>
+          <div class="experience-section">
+            <h2 class="experience-section-title">Experience</h2>
 
             <div class="d-flex justify-content-between">
               <div>
@@ -133,8 +133,8 @@
             <p class="experience-technologies">Technologies: Java, Spring, MySQL, JPA, JavaScript, Node.js, Docker, Nginx, GitLab CI/CD</p>
           </div>
           <hr>
-          <div class="section">
-            <h2 class="section-title">Education</h2>
+          <div class="experience-section">
+            <h2 class="experience-section-title">Education</h2>
 
             <div class="d-flex justify-content-between">
               <div>
@@ -149,8 +149,8 @@
             </div>
           </div>
           <hr>
-          <div class="section text-left">
-            <h2 class="section-title">Fun Facts</h2>
+          <div class="experience-section text-left">
+            <h2 class="experience-section-title">Fun Facts</h2>
             <ul id="trivia-list">
               <li>
                 Hobbies include hiking, cycling, walking, lifting weights, and playing video games
@@ -161,37 +161,37 @@
             </ul>
           </div>
           <hr>
-          <div class="section">
+          <div class="experience-section">
             <!-- <h2 class="section-title">Links</h2> -->
 
             <div class="bottom-contact-links-container">
               <a href="https://github.com/noreebia" target="_blank">
-                <img alt="GitHub profile" class="contact-photo" src="/images/github-logo-2.png">
+                <img alt="GitHub profile" class="contact-link-image" src="/images/github-logo-2.png">
               </a>
 
               <a href="https://www.linkedin.com/in/suekimdev/" target="_blank">
-                <img alt="LinkedIn profile" class="contact-photo" src="/images/linkedin-logo.png">
+                <img alt="LinkedIn profile" class="contact-link-image" src="/images/linkedin-logo.png">
               </a>
 
               <a href="mailto:suekimdev@gmail.com" target="_blank">
-                <img class="contact-photo" src="/images/gmail-logo.png">
+                <img class="contact-link-image" src="/images/gmail-logo.png">
               </a>
             </div>
           </div>
         </div>
 
-        <div class="col-sm-3 contact-sidebar" id="contact-me-wrapper">
-          <div class="d-flex flex-column justify-content-around align-items-center" id="contact-me">
+        <div class="col-sm-3 contact-sidebar" id="floating-contact-section-inner-container">
+          <div class="d-flex flex-column justify-content-around align-items-center" id="floating-contact-section-container">
             <a href="https://github.com/noreebia" target="_blank">
-              <img alt="GitHub profile" class="contact-photo" src="/images/github-logo-2.png">
+              <img alt="GitHub profile" class="contact-link-image" src="/images/github-logo-2.png">
             </a>
 
             <a href="https://www.linkedin.com/in/suekimdev/" target="_blank">
-              <img alt="LinkedIn profile" class="contact-photo" src="/images/linkedin-logo.png">
+              <img alt="LinkedIn profile" class="contact-link-image" src="/images/linkedin-logo.png">
             </a>
 
             <a href="mailto:suekimdev@gmail.com" target="_blank">
-              <img alt="Send an email" class="contact-photo" src="/images/gmail-logo.png">
+              <img alt="Send an email" class="contact-link-image" src="/images/gmail-logo.png">
             </a>
           </div>
         </div>
@@ -201,7 +201,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const contactMe = document.getElementById('contact-me');
+      const contactMe = document.getElementById('floating-contact-section-container');
       if (contactMe) {
         Object.assign(contactMe.style, {
           marginLeft: '0px',
@@ -254,8 +254,8 @@
     }
 
     function adjustContactSection() {
-      const contactWrapper = document.getElementById('contact-me-wrapper');
-      const contactMe = document.getElementById('contact-me');
+      const contactWrapper = document.getElementById('floating-contact-section-inner-container');
+      const contactMe = document.getElementById('floating-contact-section-container');
       if (!contactWrapper || !contactMe) return;
 
       const nearBottomOrSmall = (window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 100) ||
