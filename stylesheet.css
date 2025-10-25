@@ -143,9 +143,9 @@ a:focus {
 
 /* Sections and utilities */
 .section {
-  text-align: left;
-  text-justify: auto;
-  hyphens: auto;
+  text-align: justify;
+  /*text-justify: auto;*/
+  /*hyphens: auto;*/
 }
 
 .section-title {
@@ -154,15 +154,10 @@ a:focus {
   font-weight: 700;
 }
 
-.section-description {
-  text-align: left;
-}
-
-.links-row {
+.bottom-contact-links-container {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 1.5rem;
 }
 
 .contact-sidebar {
@@ -171,9 +166,5 @@ a:focus {
 }
 
 .about-content {
-  text-align: justify;
-}
-
-.experience-bullet-points, .experience-description, .experience-technologies {
   text-align: justify;
 }
