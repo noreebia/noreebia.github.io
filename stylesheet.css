@@ -161,6 +161,10 @@ a:focus {
   .employment-name-and-date-container {
     /*text-align: left*/
   }
+
+  .employer-location {
+    text-align: right;
+  }
 }
 
 .bottom-contact-links-container {
