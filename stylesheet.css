@@ -29,19 +29,33 @@ h4 {
   font-weight: 700;
 }
 
-h1 { font-size: clamp(1.75rem, 1.2rem + 2vw, 2.25rem); }
-h2 { font-size: clamp(1.5rem, 1.1rem + 1.5vw, 1.875rem); }
-h3 { font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem); }
+h1 {
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 2.25rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.1rem + 1.5vw, 1.875rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+}
 
 /* Paragraphs and lists */
-p { margin: 0 0 1rem; }
+p {
+  margin: 0 0 1rem;
+}
+
 ul,
 ol {
   padding-left: 1.2rem;
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
-li { margin-bottom: 0.4rem; }
+
+li {
+  margin-bottom: 0.4rem;
+}
 
 /* Link styling */
 a {
@@ -49,6 +63,7 @@ a {
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.15em;
 }
+
 a:hover,
 a:focus {
   color: #084298;
@@ -59,10 +74,14 @@ a:focus {
 .section,
 #content p,
 #content ul,
-#content ol { max-width: 70ch; }
+#content ol {
+  max-width: 70ch;
+}
 
 /* Layout and structure */
-#content { text-align: left; }
+#content {
+  text-align: left;
+}
 
 /* Keep the profile area visually centered */
 #profile {
@@ -70,7 +89,9 @@ a:focus {
   text-align: center;
 }
 
-#language-selector { float: right; }
+#language-selector {
+  float: right;
+}
 
 #contact-me {
   /* position:fixed; */
@@ -97,7 +118,9 @@ a:focus {
   width: 100%;
 }
 
-#trivia-list { display: inline-block; }
+#trivia-list {
+  display: inline-block;
+}
 
 /* Media & images */
 #profile-photo {
@@ -126,7 +149,9 @@ a:focus {
   font-weight: 700;
 }
 
-.section-description { text-align: left; }
+.section-description {
+  text-align: left;
+}
 
 .links-row {
   display: flex;
@@ -147,5 +172,7 @@ a:focus {
 
 /* Slightly larger type on very wide screens */
 @media (min-width: 1200px) {
-  body { font-size: 17px; }
+  body {
+    font-size: 17px;
+  }
 }
