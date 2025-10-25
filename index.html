@@ -180,8 +180,8 @@
           </div>
         </div>
 
-        <div class="col-sm-3 contact-sidebar" id="floating-contact-section-inner-container">
-          <div class="d-flex flex-column justify-content-around align-items-center" id="floating-contact-section-container">
+        <div class="col-sm-3 contact-sidebar" id="floating-contact-section-outer-container">
+          <div class="d-flex flex-column justify-content-around align-items-center" id="floating-contact-section-inner-container">
             <a href="https://github.com/noreebia" target="_blank">
               <img alt="GitHub profile" class="contact-link-image" src="/images/github-logo-2.png">
             </a>
@@ -201,7 +201,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const contactMe = document.getElementById('floating-contact-section-container');
+      const contactMe = document.getElementById('floating-contact-section-inner-container');
       if (contactMe) {
         Object.assign(contactMe.style, {
           marginLeft: '0px',
@@ -254,8 +254,8 @@
     }
 
     function adjustContactSection() {
-      const contactWrapper = document.getElementById('floating-contact-section-inner-container');
-      const contactMe = document.getElementById('floating-contact-section-container');
+      const contactWrapper = document.getElementById('floating-contact-section-outer-container');
+      const contactMe = document.getElementById('floating-contact-section-inner-container');
       if (!contactWrapper || !contactMe) return;
 
       const nearBottomOrSmall = (window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 100) ||

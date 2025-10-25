@@ -98,7 +98,7 @@ a:focus {
   float: right;
 }
 
-#floating-contact-section-container {
+#floating-contact-section-inner-container {
   /* position:fixed; */
   border-radius: 40px;
   margin-left: auto;
@@ -112,7 +112,7 @@ a:focus {
 }
 
 /* Smooth fade for the contact sidebar wrapper */
-#floating-contact-section-inner-container {
+#floating-contact-section-outer-container {
   opacity: 1;
   transition: opacity 300ms ease;
 }
@@ -140,13 +140,14 @@ a:focus {
   text-align: justify;
   /*text-justify: auto;*/
   /*hyphens: auto;*/
+
+  .experience-section-title {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
 }
 
-.experience-section-title {
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-  font-weight: 700;
-}
 
 .bottom-contact-links-container {
   display: flex;
