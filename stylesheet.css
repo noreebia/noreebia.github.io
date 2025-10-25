@@ -98,25 +98,31 @@ a:focus {
   float: right;
 }
 
-#floating-contact-section-inner-container {
-  /* position:fixed; */
-  border-radius: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 20px;
-  width: 70%;
-  min-height: 250px;
-  height: 50%;
-  border-style: solid;
-  /* position: fixed; */
-}
-
 /* Smooth fade for the contact sidebar wrapper */
 #floating-contact-section-outer-container {
   opacity: 1;
   transition: opacity 300ms ease;
   display: flex;
   justify-content: center;
+
+  #floating-contact-section-inner-container {
+    /* position:fixed; */
+    border-radius: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1.5rem;
+    width: 70%;
+    min-height: 250px;
+    height: 50%;
+    border-style: solid;
+    /* position: fixed; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
 }
 
 #trivia-list {
@@ -154,7 +160,7 @@ a:focus {
 .bottom-contact-links-container {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .about-content {

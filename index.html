@@ -181,7 +181,7 @@
         </div>
 
         <div class="col-sm-3" id="floating-contact-section-outer-container">
-          <div class="d-flex flex-column justify-content-around align-items-center" id="floating-contact-section-inner-container">
+          <div id="floating-contact-section-inner-container">
             <a href="https://github.com/noreebia" target="_blank">
               <img alt="GitHub profile" class="contact-link-image" src="/images/github-logo-2.png">
             </a>
@@ -207,7 +207,7 @@
           marginLeft: '0px',
           marginRight: '0px',
           position: 'fixed',
-          top: '20px',
+          top: '2rem',
           maxWidth: '150px',
           minWidth: '100px'
         });
@@ -254,31 +254,31 @@
     }
 
     function adjustContactSection() {
-      const contactWrapper = document.getElementById('floating-contact-section-outer-container');
-      const contactMe = document.getElementById('floating-contact-section-inner-container');
-      if (!contactWrapper || !contactMe) return;
+      const floatingContactSectionOuterContainer = document.getElementById('floating-contact-section-outer-container');
+      const floatingContactSectionInnerContainer = document.getElementById('floating-contact-section-inner-container');
+      if (!floatingContactSectionOuterContainer || !floatingContactSectionInnerContainer) return;
 
       const nearBottomOrSmall = (window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 100) ||
         window.matchMedia('(max-width: 700px)').matches;
 
-      const isHidden = getComputedStyle(contactWrapper).display === 'none';
+      const isHidden = getComputedStyle(floatingContactSectionOuterContainer).display === 'none';
 
       if (nearBottomOrSmall && !isHidden) {
-        hideWithFade(contactWrapper);
+        hideWithFade(floatingContactSectionOuterContainer);
         return;
       }
 
       if (!nearBottomOrSmall && isHidden) {
-        showWithFade(contactWrapper);
+        showWithFade(floatingContactSectionOuterContainer);
       }
 
       const col = document.querySelector('.col-sm-3');
       if (col) {
         const width = col.clientWidth; // includes padding, similar to jQuery innerWidth
-        Object.assign(contactMe.style, {
+        Object.assign(floatingContactSectionInnerContainer.style, {
           marginLeft: 'auto',
           marginRight: 'auto',
-          top: '20px',
+          top: '2rem',
           width: (width * 7 / 10) + 'px'
         });
       }
