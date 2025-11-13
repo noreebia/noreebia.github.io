@@ -76,12 +76,12 @@ a:focus {
 }
 
 /* Limit measure for comfortable reading */
-.experience-section,
+/* .experience-section,
 #content p,
 #content ul,
 #content ol {
   max-width: 70ch;
-}
+} */
 
 /* Layout and structure */
 #content {
